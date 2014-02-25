@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
-public class UserDataserviceImpl implements UserDataService{
+public class UserDataserviceImpl extends RemoteServiceServlet implements UserDataService {
 	
 	private static final long serialVersionUID = 1L;
 	 

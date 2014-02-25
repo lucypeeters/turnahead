@@ -6,14 +6,14 @@ import com.google.gwt.event.logical.shared.SelectionEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
-import com.google.gwt.user.cellview.client.CellList;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
-
+import javax.persistence.EntityManager;
+import com.programmeren4.turnahead.EMF;
+import com.programmeren4.turnahead.client.ui.DataUser;
 
 public class FormOverview extends Composite {
 	
@@ -53,12 +53,21 @@ public class FormOverview extends Composite {
 	}
 // userdatapanel-------------------------------------------------------------------------	
 	//data uit databank halen voor persoonsgegevens
+	// BEDOELING : haalt uit databank via DataUser.java
 		@UiHandler("userDataPanel") 
-		void displayUserData(final String userData) {
-		// string userData(naam, voornaam, geboortedatum, email,....)
-			//methode die userdata in panel gaat plaatsen
-		//setUserdata();
-		}
+		void displayUserData(DataUser tekst) {
+			 EntityManager em = EMF.get().createEntityManager();
+			 try {
+			      tekst.toStr();
+			    } finally {
+			        em.close();
+			    }
+			 
+			 }
+		
+		
+		
+	   
 //----------------------------------------------------------------------------------------
 
 // charpanel------------------------------------------------------------------------------

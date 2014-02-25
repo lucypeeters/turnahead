@@ -8,6 +8,7 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
 
 public class FormHome extends Composite {
@@ -35,8 +36,9 @@ public class FormHome extends Composite {
 
 	@UiHandler("buttonAanmelden")
 	void onClick(ClickEvent e) {
-		// open new window ipv hello login scherm
-		Window.alert("aanmelden window");
+		FormOverview form1 = new FormOverview();
+		RootPanel.get().clear();
+		RootPanel.get().add(form1);
 		
 	}
 	@UiHandler("buttonRegisteren")
