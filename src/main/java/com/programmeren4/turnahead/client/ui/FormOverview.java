@@ -3,6 +3,7 @@ package com.programmeren4.turnahead.client.ui;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.logical.shared.SelectionEvent;
+import com.google.gwt.place.shared.Place;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
@@ -11,7 +12,9 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
+
 import javax.persistence.EntityManager;
+
 import com.programmeren4.turnahead.EMF;
 import com.programmeren4.turnahead.client.ui.DataUser;
 
@@ -32,10 +35,6 @@ public class FormOverview extends Composite {
 	Button terugKnop;
 	@UiField
 	Button aanpassenKnop;
-	@UiField
-	Button verwijderCharKnop;
-	@UiField
-	Button nieuwCharKnop;
 	@UiField
 	VerticalPanel userDataPanel;
 	/*
@@ -70,43 +69,8 @@ public class FormOverview extends Composite {
 	   
 //----------------------------------------------------------------------------------------
 
-// charpanel------------------------------------------------------------------------------
-		// data uit databank van karakter dat bij gebruiker hoort
-		@UiHandler("charPanel")
-		void displayChar(final String character){
-			//setCharacterData
-		}
-		
-		@UiHandler("nieuwCharKnop")
-		// er wordt een nieuwe pagina geladen waar en een nieuw karakter eigenschappen kan geven
-		void onClickNieuw(ClickEvent e) {
-			// open nieuw scherm
-			// MakeNewChar;
-			FormMakeChar formChar=new FormMakeChar();
-			RootPanel.get().clear();
-			RootPanel.get().add(formChar);
-		}
-		
-
-		@UiHandler("verwijderCharKnop")
-		// het karakter wordt verwijderd in de databank
-		void onClickVerwijderen(ClickEvent e) {
-			//deleteChar();
-		}
-		
 //----------------------------------------------------------------------------------------
 
-// location-------------------------------------------------------------------------------
-		// toont aanwezige locatie van wereld in de vorm van een listbox
-		@UiHandler("locations")
-		void displayLocations(final String locations){
-			//getCurrentLocations();
-		}
-		void onMouseDoubleClick(SelectionEvent e){
-			// wanneer een locatie wordt geslecteerd gaat er een niew venster open waar men 
-			//de items kan toevoegen
-		}
-		
 		
 //----------------------------------------------------------------------------------------
 		// userdatapanel------------------------------------------------------------------------
@@ -124,11 +88,8 @@ public class FormOverview extends Composite {
 //
 //		// met controller werken goto()
 		
-	}
+	    }
 
-	
-
-	
 	
 	
 }
