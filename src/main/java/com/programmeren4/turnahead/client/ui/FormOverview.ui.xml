@@ -9,15 +9,11 @@
 	</ui:style>
 	<g:HTMLPanel>
 		<g:VerticalPanel styleName= "{style.important}" ui:field="userDataPanel">
-		    <g:Button text="aanpassen" styleName="{style.important}" ui:field="aanpassenKnop" />
+			<g:Button text="aanpassen" styleName="{style.important}" ui:field="aanpassenKnop" />
 		</g:VerticalPanel>
 		
-			
-		<g:VerticalPanel styleName= "{style.important}" ui:field="adminPanel">
-		<g:ListBox  ui:field="locations"/> <!-- visibleItemCount='1' -->
-		
-		</g:VerticalPanel>
-				
+		<g:Button text="overzicht karakters" styleName="{style.important}" ui:field="charKnop" />	
+		<g:Button text="spel aanpassen" styleName="{style.important}" ui:field="adminKnop" />
 		<g:Button text="terug" styleName="{style.important}" ui:field="terugKnop" />
 		
 	</g:HTMLPanel>
