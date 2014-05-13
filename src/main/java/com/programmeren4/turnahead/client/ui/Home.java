@@ -5,11 +5,13 @@ import com.google.gwt.user.client.ui.RootPanel;
 
 public class Home implements EntryPoint {
 
-private FormHome form = new FormHome();
 
-@Override
-public void onModuleLoad() {
-RootPanel.get().add(form);
-}
+	private HomeView application = new HomeView();
+
+	@Override
+	public void onModuleLoad() {
+		RootPanel.get().add(application);
+	}
+
 
 }

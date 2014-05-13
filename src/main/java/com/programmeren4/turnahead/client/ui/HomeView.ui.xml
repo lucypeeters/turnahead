@@ -26,7 +26,7 @@ Net zoals karakters (playing en non playing) en items.<br></br>
 Deze wijzigingen kunnen onstaan door het spelverloop of tot stand gebracht worden door een admin.
 </div>
 <div class ="{style.table}">
-<g:Image url="g_lichter.gif" title="spel" altText="file not found"></g:Image>
+<g:Image url="images/g_lichter.gif" title="spel" altText="file not found"></g:Image>
 </div>
 </form>
 

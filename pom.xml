@@ -1,6 +1,4 @@
-<project
-xmlns="http://maven.apache.org/POM/4.0.0"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 <modelVersion>4.0.0</modelVersion>
@@ -11,7 +9,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 <name>GWT Maven Archetype</name>
 
 <properties>
-<gwtVersion>2.6.0-rc4</gwtVersion>
+<gwtVersion>2.6.0</gwtVersion>
 <javaJDKVersion>1.7</javaJDKVersion>
 <mavenWARVersion>2.1.1</mavenWARVersion>
 <mavenCompilerVersion>2.3.2</mavenCompilerVersion>
@@ -37,16 +35,19 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 <groupId>javax.validation</groupId>
 <artifactId>validation-api</artifactId>
 <version>1.0.0.GA</version>
-<scope>test</scope>
 </dependency>
 <dependency>
 <groupId>javax.validation</groupId>
 <artifactId>validation-api</artifactId>
 <version>1.0.0.GA</version>
 <classifier>sources</classifier>
-<scope>test</scope>
 </dependency>
 
+<dependency>
+<groupId>mysql</groupId>
+<artifactId>mysql-connector-java</artifactId>
+<version>5.1.6</version>
+</dependency>
 
 <!-- Testing dependencies -->
 <dependency>
@@ -66,7 +67,6 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 <directory>src/main/resources</directory>
 <filtering>false</filtering>
 <excludes>
-<exclude>**/*.css</exclude>
 <exclude>**/Messages.properties</exclude>
 </excludes>
 </resource>
@@ -86,9 +86,9 @@ src/main/resources toe aan het classpath zodat de bestanden hierin gevonden
 kunnen worden Compile: compileert Test: voert alle beschikbare testen uit
 i18n & generateAsync: laat GWT klassen genereren die nodig zijn voor de compilatie -->
 <goal>resources</goal>
+<goal>generateAsync</goal>
 <goal>compile</goal>
 <goal>test</goal>
-<goal>generateAsync</goal>
 </goals>
 </execution>
 </executions>
