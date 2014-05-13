@@ -53,18 +53,18 @@ void displayUserData(final String userData) {
 
 
 @UiHandler("aanpassenKnop")
-void onClickTerugKnop(ClickEvent e){
+void onClickAanpassenKnop(ClickEvent e){
 	// hier kan met de SPELERgegevens mee aanpassen
 }
 
 @UiHandler("charKnop")
-void onClickTerugKnop(ClickEvent e){
+void onClickCharKnop(ClickEvent e){
 	// gaat naar FormCharactersView pagina waar men een lijst van characters wordt 
 	//getoont die verbonden zijn met de aangelogde speler
 }
 
 @UiHandler("adminKnop")
-void onClickTerugKnop(ClickEvent e){
+void onClickAdminKnop(ClickEvent e){
 	// gaat naar form admin als speler ook admin is
 }
 
