@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.important {
+		font-weight: bold;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel styleName= "{style.important}" ui:field="charPanel">
+			<g:FlexTable ui:field="karakters" styleName="{style.important}" borderWidth="2" />
+			<g:Button text="verwijderen karakter" styleName="{style.important}" ui:field="verwijderCharKnop" />
+			<g:Button text="nieuw karakter" styleName="{style.important}" ui:field="nieuwCharKnop" />
+		</g:VerticalPanel>
+	    
+	  <g:Button text="terug" styleName="{style.important}" ui:field="terugKnop" />
+		
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="http://java.sun.com/jstl/core">
+	<ui:style>
+	.important {
+		font-weight: bold;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel styleName= "{style.important}" ui:field="spelAanwezig">
+			<c:CellBrowser ui:field="aanwezig" />
+		</g:VerticalPanel>
+		<g:Button text="locaties toevoegen" styleName="{style.important}" ui:field="locatiesToevoegenKnop" />		
+		<g:Button text="items toevoegen" styleName="{style.important}" ui:field="itemsToevoegenKnop" />	
+		<g:Button text="verwijder" styleName="{style.important}" ui:field="verwijderenKnop" />			
+		<g:Button text="terug" styleName="{style.important}" ui:field="terugKnop" />
+		
+	</g:HTMLPanel>
+</ui:UiBinder> 
